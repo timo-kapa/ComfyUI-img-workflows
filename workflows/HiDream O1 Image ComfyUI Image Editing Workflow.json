@@ -1,0 +1,354 @@
+{
+  "id": "634e6abd-4962-4ed0-88a1-0f6778d4365b",
+  "extra": {
+    "ds": {
+      "scale": 0.93178669074628,
+      "offset": [
+        -214.87694420085012,
+        1131.6683261146734
+      ]
+    },
+    "reroutes": null,
+    "frontendVersion": "1.43.18",
+    "VHS_MetadataImage": true,
+    "VHS_latentpreview": false,
+    "VHS_KeepIntermediate": true,
+    "VHS_latentpreviewrate": 0
+  },
+  "links": [
+    [
+      6,
+      2,
+      0,
+      8,
+      0,
+      "HIDREAM_O1_MODEL"
+    ],
+    [
+      8,
+      9,
+      0,
+      8,
+      1,
+      "HIDREAM_O1_CONDITIONING"
+    ],
+    [
+      9,
+      8,
+      0,
+      5,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      10,
+      0,
+      8,
+      2,
+      "IMAGE"
+    ]
+  ],
+  "nodes": [
+    {
+      "id": 2,
+      "pos": [
+        469.22163609089347,
+        -907.7593407497287
+      ],
+      "mode": 0,
+      "size": [
+        329.89276394683066,
+        139.96959474415962
+      ],
+      "type": "HiDreamO1ModelLoader",
+      "flags": {},
+      "order": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "model",
+          "type": "HIDREAM_O1_MODEL",
+          "label": null,
+          "links": [
+            6
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "ebd8457f0e45dbf7ee6601a806c53047d1445528",
+        "cnr_id": "HiDream_O1-ComfyUI",
+        "Node name for S&R": "HiDreamO1ModelLoader"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "diffusion_models/HiDream-O1-Image-bf16",
+        "auto",
+        "auto",
+        false
+      ]
+    },
+    {
+      "id": 8,
+      "pos": [
+        959.695947210478,
+        -876.8945332563485
+      ],
+      "mode": 0,
+      "size": [
+        351.5501295914862,
+        434
+      ],
+      "type": "HiDreamO1Sampler",
+      "flags": {},
+      "order": 3,
+      "inputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "link": 6,
+          "name": "model",
+          "type": "HIDREAM_O1_MODEL",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "link": 8,
+          "name": "conditioning",
+          "type": "HIDREAM_O1_CONDITIONING",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "link": 11,
+          "name": "image.image_1",
+          "type": "IMAGE",
+          "label": "image_1",
+          "shape": 7,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "image",
+          "type": "IMAGE",
+          "label": null,
+          "links": [
+            9
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "ebd8457f0e45dbf7ee6601a806c53047d1445528",
+        "cnr_id": "HiDream_O1-ComfyUI",
+        "Node name for S&R": "HiDreamO1Sampler"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "auto",
+        2048,
+        2048,
+        0,
+        43507909048955,
+        "randomize",
+        5,
+        -1,
+        7.5,
+        7.5,
+        2.5,
+        4,
+        true,
+        false,
+        "1"
+      ]
+    },
+    {
+      "id": 9,
+      "pos": [
+        461.1430407798922,
+        -688.4496127247515
+      ],
+      "mode": 0,
+      "size": [
+        259.215507062989,
+        154.85271261423713
+      ],
+      "type": "HiDreamO1Conditioning",
+      "flags": {},
+      "order": 1,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "conditioning",
+          "type": "HIDREAM_O1_CONDITIONING",
+          "label": null,
+          "links": [
+            8
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "ebd8457f0e45dbf7ee6601a806c53047d1445528",
+        "cnr_id": "HiDream_O1-ComfyUI",
+        "Node name for S&R": "HiDreamO1Conditioning"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "Change her hair to blonde",
+        "bad quality"
+      ]
+    },
+    {
+      "id": 10,
+      "pos": [
+        434.53811650809615,
+        -426.5643263875155
+      ],
+      "mode": 0,
+      "size": [
+        456.436026555584,
+        364.7555295334537
+      ],
+      "type": "LoadImage",
+      "flags": {},
+      "order": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "label": null,
+          "links": [
+            11
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "name": "MASK",
+          "type": "MASK",
+          "label": null,
+          "links": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": null
+        }
+      ],
+      "properties": {
+        "ver": "0.20.1",
+        "cnr_id": "comfy-core",
+        "Node name for S&R": "LoadImage"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "RunComfy1391.jpeg",
+        "image"
+      ]
+    },
+    {
+      "id": 5,
+      "pos": [
+        1362.0239754248985,
+        -876.6304696579848
+      ],
+      "mode": 0,
+      "size": [
+        697.0895716912985,
+        762.8400554317257
+      ],
+      "type": "PreviewImage",
+      "flags": {},
+      "order": 4,
+      "inputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "link": 9,
+          "name": "images",
+          "type": "IMAGE",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "ver": "0.20.1",
+        "cnr_id": "comfy-core",
+        "Node name for S&R": "PreviewImage"
+      },
+      "showAdvanced": null,
+      "widgets_values": []
+    }
+  ],
+  "config": {},
+  "groups": [],
+  "version": 0.4,
+  "revision": 0,
+  "definitions": null,
+  "last_link_id": 11,
+  "last_node_id": 10,
+  "floatingLinks": null
+}

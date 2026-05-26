@@ -1,0 +1,595 @@
+{
+  "id": "joyai-image-edit-workflow",
+  "extra": {
+    "ds": {
+      "scale": 0.5131581182307069,
+      "offset": [
+        962.835275380143,
+        674.4086881280133
+      ]
+    },
+    "reroutes": null,
+    "frontendVersion": "1.42.10",
+    "VHS_MetadataImage": true,
+    "VHS_latentpreview": false,
+    "VHS_KeepIntermediate": true,
+    "VHS_latentpreviewrate": 0
+  },
+  "links": [
+    [
+      1,
+      1,
+      0,
+      7,
+      0,
+      "JOYAI_TRANSFORMER"
+    ],
+    [
+      2,
+      2,
+      0,
+      7,
+      1,
+      "JOYAI_TEXT_ENCODER"
+    ],
+    [
+      3,
+      2,
+      1,
+      7,
+      2,
+      "JOYAI_TOKENIZER"
+    ],
+    [
+      4,
+      3,
+      0,
+      7,
+      3,
+      "VAE"
+    ],
+    [
+      5,
+      4,
+      0,
+      7,
+      5,
+      "STRING"
+    ],
+    [
+      6,
+      5,
+      0,
+      7,
+      6,
+      "STRING"
+    ],
+    [
+      7,
+      6,
+      0,
+      7,
+      6,
+      "IMAGE"
+    ],
+    [
+      8,
+      7,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      13,
+      6,
+      0,
+      7,
+      4,
+      "IMAGE"
+    ]
+  ],
+  "nodes": [
+    {
+      "id": 5,
+      "pos": [
+        -12.529999999999843,
+        418.8000000000001
+      ],
+      "mode": 0,
+      "size": [
+        315,
+        160
+      ],
+      "type": "PrimitiveNode",
+      "flags": {},
+      "order": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "STRING",
+          "type": "STRING",
+          "label": null,
+          "links": [
+            6
+          ],
+          "shape": null,
+          "locked": null,
+          "widget": {
+            "name": "negative_prompt"
+          },
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Negative Prompt",
+        "Run widget replace on values": false
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 2,
+      "pos": [
+        -288.7990000000004,
+        -275.8149999999998
+      ],
+      "mode": 0,
+      "size": [
+        350,
+        120
+      ],
+      "type": "JoyAIImageEditTextEncoderLoader",
+      "flags": {},
+      "order": 1,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "text_encoder",
+          "type": "JOYAI_TEXT_ENCODER",
+          "label": null,
+          "links": [
+            2
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": 0
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "name": "tokenizer",
+          "type": "JOYAI_TOKENIZER",
+          "label": null,
+          "links": [
+            3
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JoyAIImageEditTextEncoderLoader"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "custom_nodes/JoyAI-Image-Edit-ckpts/JoyAI-Image-Und",
+        "bf16"
+      ]
+    },
+    {
+      "id": 7,
+      "pos": [
+        500,
+        -100
+      ],
+      "mode": 0,
+      "size": [
+        380,
+        390
+      ],
+      "type": "JoyAIImageEditPipeline",
+      "flags": {},
+      "order": 6,
+      "inputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "link": 1,
+          "name": "transformer",
+          "type": "JOYAI_TRANSFORMER",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "link": 2,
+          "name": "text_encoder",
+          "type": "JOYAI_TEXT_ENCODER",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "link": 3,
+          "name": "tokenizer",
+          "type": "JOYAI_TOKENIZER",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "link": 4,
+          "name": "vae",
+          "type": "VAE",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "link": 13,
+          "name": "image",
+          "type": "IMAGE",
+          "label": null,
+          "shape": 7,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        },
+        {
+          "dir": null,
+          "link": 5,
+          "name": "prompt",
+          "type": "STRING",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "widget": {
+            "name": "prompt"
+          },
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        },
+        {
+          "dir": null,
+          "link": 6,
+          "name": "negative_prompt",
+          "type": "STRING",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "widget": {
+            "name": "negative_prompt"
+          },
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "image",
+          "type": "IMAGE",
+          "label": null,
+          "links": [
+            8
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JoyAIImageEditPipeline"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "Turn the plate blue",
+        "",
+        30,
+        4,
+        123,
+        "fixed",
+        1024,
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": 1,
+      "pos": [
+        145.82199999999986,
+        -377.66100000000046
+      ],
+      "mode": 0,
+      "size": [
+        350,
+        120
+      ],
+      "type": "JoyAIImageEditTransformerLoader",
+      "flags": {},
+      "order": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "transformer",
+          "type": "JOYAI_TRANSFORMER",
+          "label": null,
+          "links": [
+            1
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JoyAIImageEditTransformerLoader"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "custom_nodes/JoyAI-Image-Edit-ckpts/transformer/transformer.pth",
+        "bf16"
+      ]
+    },
+    {
+      "id": 3,
+      "pos": [
+        -367.8670000000005,
+        -72.81799999999978
+      ],
+      "mode": 0,
+      "size": [
+        350,
+        120
+      ],
+      "type": "JoyAIImageEditVAELoader",
+      "flags": {},
+      "order": 3,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "vae",
+          "type": "VAE",
+          "label": null,
+          "links": [
+            4
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JoyAIImageEditVAELoader"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "custom_nodes/JoyAI-Image-Edit-ckpts/vae/Wan2.1_VAE.pth",
+        "bf16"
+      ]
+    },
+    {
+      "id": 8,
+      "pos": [
+        962.5999999999997,
+        -103.30000000000003
+      ],
+      "mode": 0,
+      "size": [
+        541,
+        471
+      ],
+      "type": "SaveImage",
+      "flags": {},
+      "order": 7,
+      "inputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "link": 8,
+          "name": "images",
+          "type": "IMAGE",
+          "label": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "ver": "0.19.0",
+        "cnr_id": "comfy-core",
+        "Node name for S&R": "SaveImage"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "RunComfy_examples_1397_1"
+      ]
+    },
+    {
+      "id": 6,
+      "pos": [
+        -401.24090909090893,
+        156.61818181818157
+      ],
+      "mode": 0,
+      "size": [
+        315,
+        314
+      ],
+      "type": "LoadImage",
+      "flags": {},
+      "order": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "label": null,
+          "links": [
+            7,
+            13
+          ],
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": 0
+        },
+        {
+          "dir": null,
+          "pos": null,
+          "name": "MASK",
+          "type": "MASK",
+          "label": null,
+          "links": null,
+          "shape": null,
+          "locked": null,
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "ver": "0.19.0",
+        "cnr_id": "comfy-core",
+        "Node name for S&R": "LoadImage"
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "RunComfy_examples_1397_1.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 4,
+      "pos": [
+        -13.241094187555614,
+        202.94397308926952
+      ],
+      "mode": 0,
+      "size": [
+        315,
+        160
+      ],
+      "type": "PrimitiveNode",
+      "flags": {},
+      "order": 5,
+      "inputs": [],
+      "outputs": [
+        {
+          "dir": null,
+          "pos": null,
+          "name": "STRING",
+          "type": "STRING",
+          "label": null,
+          "links": [
+            5
+          ],
+          "shape": null,
+          "locked": null,
+          "widget": {
+            "name": "prompt"
+          },
+          "color_on": null,
+          "color_off": null,
+          "removable": null,
+          "nameLocked": null,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Prompt",
+        "Run widget replace on values": false
+      },
+      "showAdvanced": null,
+      "widgets_values": [
+        "Turn the plate blue"
+      ]
+    }
+  ],
+  "config": {},
+  "groups": [],
+  "version": 0.4,
+  "revision": 1,
+  "definitions": null,
+  "last_link_id": 13,
+  "last_node_id": 10,
+  "floatingLinks": null
+}
