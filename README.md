@@ -65,6 +65,10 @@ Some workflows may require specific models, custom nodes, or hardware resources 
 
 The workflows in this repository are intended as practical starting points. Users are encouraged to adapt prompts, seeds, model settings, sampling parameters, and node structures according to their own creative, technical, or research needs.
 
+## Acknowledgements
+
+The workflows in this repository are based on publicly available ComfyUI workflow examples and model ecosystems, including workflows documented by RunComfy and Comfy.org. Please consult the relevant model cards, workflow pages, and licensing terms for each workflow and associated model before using them in production, commercial, or research contexts.
+
 ## Repository Structure
 
 ```text
