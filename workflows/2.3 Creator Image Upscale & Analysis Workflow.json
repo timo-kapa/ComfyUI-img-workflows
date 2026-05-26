@@ -1,0 +1,1651 @@
+{
+  "config": {},
+  "definitions": {
+    "subgraphs": [
+      {
+        "config": {},
+        "extra": {
+          "workflowRendererVersion": "Vue"
+        },
+        "groups": [
+          {
+            "bounding": [
+              854,
+              -118,
+              588,
+              792
+            ],
+            "color": "#3f789e",
+            "flags": {},
+            "font_size": 24,
+            "id": 3,
+            "title": "Prompt"
+          },
+          {
+            "bounding": [
+              374,
+              -118,
+              432,
+              792
+            ],
+            "color": "#3f789e",
+            "flags": {},
+            "font_size": 24,
+            "id": 5,
+            "title": "Models"
+          },
+          {
+            "bounding": [
+              362,
+              698,
+              1068,
+              600
+            ],
+            "color": "#3f789e",
+            "flags": {},
+            "font_size": 24,
+            "id": 32,
+            "title": "Pre-Upscale by model"
+          },
+          {
+            "bounding": [
+              1490,
+              -118,
+              818.3758654552944,
+              845.6325128028307
+            ],
+            "color": "#3f789e",
+            "flags": {},
+            "font_size": 24,
+            "id": 33,
+            "title": "Resampling"
+          }
+        ],
+        "id": "3b4342ec-d8c2-43e3-83da-3b0fd25f4c0c",
+        "inputNode": {
+          "bounding": [
+            -113.75684563487843,
+            452.4000153303473,
+            144,
+            168
+          ],
+          "id": -10
+        },
+        "inputs": [
+          {
+            "id": "e9a14390-4f93-4065-8b02-323f999527c0",
+            "linkIds": [
+              215
+            ],
+            "localized_name": "image",
+            "name": "image",
+            "pos": [
+              3.535961970934636,
+              395.3333461086228
+            ],
+            "type": "IMAGE"
+          },
+          {
+            "id": "c5655e11-9531-4949-996c-958b5fe92085",
+            "linkIds": [
+              109
+            ],
+            "name": "unet_name",
+            "pos": [
+              3.535961970934636,
+              415.3333461086228
+            ],
+            "type": "COMBO"
+          },
+          {
+            "id": "82576043-dd69-4604-b572-09fabb6e602d",
+            "linkIds": [
+              110
+            ],
+            "name": "clip_name",
+            "pos": [
+              3.535961970934636,
+              435.3333461086228
+            ],
+            "type": "COMBO"
+          },
+          {
+            "id": "59e20fb5-cd61-4d4b-a1fd-15a90c7ba6c2",
+            "linkIds": [
+              111
+            ],
+            "name": "vae_name",
+            "pos": [
+              3.535961970934636,
+              455.3333461086228
+            ],
+            "type": "COMBO"
+          },
+          {
+            "id": "adc35153-dc52-4bac-be7e-9da19471f441",
+            "linkIds": [
+              112
+            ],
+            "name": "model_name",
+            "pos": [
+              3.535961970934636,
+              475.3333461086228
+            ],
+            "type": "COMBO"
+          }
+        ],
+        "links": [
+          {
+            "id": 104,
+            "origin_id": 66,
+            "origin_slot": 0,
+            "target_id": 70,
+            "target_slot": 0,
+            "type": "MODEL"
+          },
+          {
+            "id": 82,
+            "origin_id": 62,
+            "origin_slot": 0,
+            "target_id": 71,
+            "target_slot": 0,
+            "type": "CLIP"
+          },
+          {
+            "id": 87,
+            "origin_id": 76,
+            "origin_slot": 0,
+            "target_id": 79,
+            "target_slot": 0,
+            "type": "UPSCALE_MODEL"
+          },
+          {
+            "id": 93,
+            "origin_id": 81,
+            "origin_slot": 0,
+            "target_id": 80,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 90,
+            "origin_id": 63,
+            "origin_slot": 0,
+            "target_id": 80,
+            "target_slot": 1,
+            "type": "VAE"
+          },
+          {
+            "id": 92,
+            "origin_id": 79,
+            "origin_slot": 0,
+            "target_id": 81,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 74,
+            "origin_id": 70,
+            "origin_slot": 0,
+            "target_id": 69,
+            "target_slot": 0,
+            "type": "MODEL"
+          },
+          {
+            "id": 75,
+            "origin_id": 67,
+            "origin_slot": 0,
+            "target_id": 69,
+            "target_slot": 1,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 83,
+            "origin_id": 71,
+            "origin_slot": 0,
+            "target_id": 69,
+            "target_slot": 2,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 91,
+            "origin_id": 80,
+            "origin_slot": 0,
+            "target_id": 69,
+            "target_slot": 3,
+            "type": "LATENT"
+          },
+          {
+            "id": 72,
+            "origin_id": 69,
+            "origin_slot": 0,
+            "target_id": 65,
+            "target_slot": 0,
+            "type": "LATENT"
+          },
+          {
+            "id": 73,
+            "origin_id": 63,
+            "origin_slot": 0,
+            "target_id": 65,
+            "target_slot": 1,
+            "type": "VAE"
+          },
+          {
+            "id": 78,
+            "origin_id": 62,
+            "origin_slot": 0,
+            "target_id": 67,
+            "target_slot": 0,
+            "type": "CLIP"
+          },
+          {
+            "id": 97,
+            "origin_id": 65,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 103,
+            "origin_id": 65,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 109,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 66,
+            "target_slot": 0,
+            "type": "COMBO"
+          },
+          {
+            "id": 110,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 62,
+            "target_slot": 0,
+            "type": "COMBO"
+          },
+          {
+            "id": 111,
+            "origin_id": -10,
+            "origin_slot": 3,
+            "target_id": 63,
+            "target_slot": 0,
+            "type": "COMBO"
+          },
+          {
+            "id": 112,
+            "origin_id": -10,
+            "origin_slot": 4,
+            "target_id": 76,
+            "target_slot": 0,
+            "type": "COMBO"
+          },
+          {
+            "id": 215,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 164,
+            "target_slot": 0,
+            "type": "IMAGE"
+          },
+          {
+            "id": 216,
+            "origin_id": 164,
+            "origin_slot": 0,
+            "target_id": 79,
+            "target_slot": 1,
+            "type": "IMAGE"
+          }
+        ],
+        "name": "Image Upscale (Z-image-Turbo)",
+        "nodes": [
+          {
+            "flags": {},
+            "id": 69,
+            "inputs": [
+              {
+                "link": 74,
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL"
+              },
+              {
+                "link": 75,
+                "localized_name": "positive",
+                "name": "positive",
+                "type": "CONDITIONING"
+              },
+              {
+                "link": 83,
+                "localized_name": "negative",
+                "name": "negative",
+                "type": "CONDITIONING"
+              },
+              {
+                "link": 91,
+                "localized_name": "latent_image",
+                "name": "latent_image",
+                "type": "LATENT"
+              }
+            ],
+            "mode": 0,
+            "order": 6,
+            "outputs": [
+              {
+                "links": [
+                  72
+                ],
+                "localized_name": "LATENT",
+                "name": "LATENT",
+                "slot_index": 0,
+                "type": "LATENT"
+              }
+            ],
+            "pos": [
+              1502,
+              122
+            ],
+            "properties": {
+              "Node name for S&R": "KSampler",
+              "cnr_id": "comfy-core",
+              "enableTabs": false,
+              "hasSecondTab": false,
+              "secondTabOffset": 80,
+              "secondTabText": "Send Back",
+              "secondTabWidth": 65,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "ver": "0.3.64"
+            },
+            "size": [
+              440,
+              589.3125
+            ],
+            "type": "KSampler",
+            "widgets_values": [
+              344777149081245,
+              "randomize",
+              5,
+              1,
+              "dpmpp_2m_sde",
+              "beta",
+              0.33
+            ]
+          },
+          {
+            "flags": {},
+            "id": 66,
+            "inputs": [
+              {
+                "link": 109,
+                "localized_name": "unet_name",
+                "name": "unet_name",
+                "type": "COMBO",
+                "widget": {
+                  "name": "unet_name"
+                }
+              }
+            ],
+            "mode": 0,
+            "order": 4,
+            "outputs": [
+              {
+                "links": [
+                  104
+                ],
+                "localized_name": "MODEL",
+                "name": "MODEL",
+                "type": "MODEL"
+              }
+            ],
+            "pos": [
+              398,
+              -34
+            ],
+            "properties": {
+              "Node name for S&R": "UNETLoader",
+              "cnr_id": "comfy-core",
+              "enableTabs": false,
+              "hasSecondTab": false,
+              "models": [
+                {
+                  "directory": "diffusion_models",
+                  "name": "z_image_turbo_bf16.safetensors",
+                  "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors"
+                }
+              ],
+              "secondTabOffset": 80,
+              "secondTabText": "Send Back",
+              "secondTabWidth": 65,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "ver": "0.3.73"
+            },
+            "size": [
+              388.78125,
+              142.65625
+            ],
+            "type": "UNETLoader",
+            "widgets_values": [
+              "z_image_turbo_bf16.safetensors",
+              "default"
+            ]
+          },
+          {
+            "flags": {},
+            "id": 62,
+            "inputs": [
+              {
+                "link": 110,
+                "localized_name": "clip_name",
+                "name": "clip_name",
+                "type": "COMBO",
+                "widget": {
+                  "name": "clip_name"
+                }
+              }
+            ],
+            "mode": 0,
+            "order": 1,
+            "outputs": [
+              {
+                "links": [
+                  78,
+                  82
+                ],
+                "localized_name": "CLIP",
+                "name": "CLIP",
+                "type": "CLIP"
+              }
+            ],
+            "pos": [
+              398,
+              158
+            ],
+            "properties": {
+              "Node name for S&R": "CLIPLoader",
+              "cnr_id": "comfy-core",
+              "enableTabs": false,
+              "hasSecondTab": false,
+              "models": [
+                {
+                  "directory": "text_encoders",
+                  "name": "qwen_3_4b.safetensors",
+                  "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors"
+                }
+              ],
+              "secondTabOffset": 80,
+              "secondTabText": "Send Back",
+              "secondTabWidth": 65,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "ver": "0.3.73"
+            },
+            "size": [
+              388.78125,
+              180.78125000000003
+            ],
+            "type": "CLIPLoader",
+            "widgets_values": [
+              "qwen_3_4b.safetensors",
+              "lumina2",
+              "default"
+            ]
+          },
+          {
+            "flags": {},
+            "id": 63,
+            "inputs": [
+              {
+                "link": 111,
+                "localized_name": "vae_name",
+                "name": "vae_name",
+                "type": "COMBO",
+                "widget": {
+                  "name": "vae_name"
+                }
+              }
+            ],
+            "mode": 0,
+            "order": 2,
+            "outputs": [
+              {
+                "links": [
+                  73,
+                  90
+                ],
+                "localized_name": "VAE",
+                "name": "VAE",
+                "type": "VAE"
+              }
+            ],
+            "pos": [
+              398,
+              386
+            ],
+            "properties": {
+              "Node name for S&R": "VAELoader",
+              "cnr_id": "comfy-core",
+              "enableTabs": false,
+              "hasSecondTab": false,
+              "models": [
+                {
+                  "directory": "vae",
+                  "name": "ae.safetensors",
+                  "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors"
+                }
+              ],
+              "secondTabOffset": 80,
+              "secondTabText": "Send Back",
+              "secondTabWidth": 65,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "ver": "0.3.73"
+            },
+            "size": [
+              388.78125,
+              108
+            ],
+            "type": "VAELoader",
+            "widgets_values": [
+              "ae.safetensors"
+            ]
+          },
+          {
+            "flags": {},
+            "id": 70,
+            "inputs": [
+              {
+                "link": 104,
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL"
+              }
+            ],
+            "mode": 0,
+            "order": 7,
+            "outputs": [
+              {
+                "links": [
+                  74
+                ],
+                "localized_name": "MODEL",
+                "name": "MODEL",
+                "slot_index": 0,
+                "type": "MODEL"
+              }
+            ],
+            "pos": [
+              1502,
+              -34
+            ],
+            "properties": {
+              "Node name for S&R": "ModelSamplingAuraFlow",
+              "cnr_id": "comfy-core",
+              "enableTabs": false,
+              "hasSecondTab": false,
+              "secondTabOffset": 80,
+              "secondTabText": "Send Back",
+              "secondTabWidth": 65,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "ver": "0.3.64"
+            },
+            "size": [
+              446.375,
+              104
+            ],
+            "type": "ModelSamplingAuraFlow",
+            "widgets_values": [
+              3
+            ]
+          },
+          {
+            "flags": {},
+            "id": 65,
+            "inputs": [
+              {
+                "link": 72,
+                "localized_name": "samples",
+                "name": "samples",
+                "type": "LATENT"
+              },
+              {
+                "link": 73,
+                "localized_name": "vae",
+                "name": "vae",
+                "type": "VAE"
+              }
+            ],
+            "mode": 0,
+            "order": 3,
+            "outputs": [
+              {
+                "links": [
+                  97,
+                  103
+                ],
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "slot_index": 0,
+                "type": "IMAGE"
+              }
+            ],
+            "pos": [
+              1994,
+              -34
+            ],
+            "properties": {
+              "Node name for S&R": "VAEDecode",
+              "cnr_id": "comfy-core",
+              "enableTabs": false,
+              "hasSecondTab": false,
+              "secondTabOffset": 80,
+              "secondTabText": "Send Back",
+              "secondTabWidth": 65,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "ver": "0.3.64"
+            },
+            "size": [
+              302.375,
+              96
+            ],
+            "type": "VAEDecode",
+            "widgets_values": []
+          },
+          {
+            "flags": {},
+            "id": 79,
+            "inputs": [
+              {
+                "link": 87,
+                "localized_name": "upscale_model",
+                "name": "upscale_model",
+                "type": "UPSCALE_MODEL"
+              },
+              {
+                "link": 216,
+                "localized_name": "image",
+                "name": "image",
+                "type": "IMAGE"
+              }
+            ],
+            "mode": 0,
+            "order": 10,
+            "outputs": [
+              {
+                "links": [
+                  92
+                ],
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE"
+              }
+            ],
+            "pos": [
+              770,
+              1142
+            ],
+            "properties": {
+              "Node name for S&R": "ImageUpscaleWithModel",
+              "cnr_id": "comfy-core",
+              "ver": "0.13.0"
+            },
+            "size": [
+              280.282734375,
+              96
+            ],
+            "type": "ImageUpscaleWithModel",
+            "widgets_values": []
+          },
+          {
+            "flags": {},
+            "id": 164,
+            "inputs": [
+              {
+                "link": 215,
+                "localized_name": "image",
+                "name": "image",
+                "type": "IMAGE"
+              }
+            ],
+            "mode": 0,
+            "order": 13,
+            "outputs": [
+              {
+                "links": [
+                  216
+                ],
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE"
+              }
+            ],
+            "pos": [
+              398,
+              986
+            ],
+            "properties": {
+              "Node name for S&R": "ImageScaleToMaxDimension"
+            },
+            "size": [
+              290.09375,
+              138.65625
+            ],
+            "type": "ImageScaleToMaxDimension",
+            "widgets_values": [
+              "lanczos",
+              2048
+            ]
+          },
+          {
+            "flags": {},
+            "id": 76,
+            "inputs": [
+              {
+                "link": 112,
+                "localized_name": "model_name",
+                "name": "model_name",
+                "type": "COMBO",
+                "widget": {
+                  "name": "model_name"
+                }
+              }
+            ],
+            "mode": 0,
+            "order": 9,
+            "outputs": [
+              {
+                "links": [
+                  87
+                ],
+                "localized_name": "UPSCALE_MODEL",
+                "name": "UPSCALE_MODEL",
+                "type": "UPSCALE_MODEL"
+              }
+            ],
+            "pos": [
+              770,
+              998
+            ],
+            "properties": {
+              "Node name for S&R": "UpscaleModelLoader",
+              "cnr_id": "comfy-core",
+              "models": [
+                {
+                  "directory": "upscale_models",
+                  "name": "RealESRGAN_x4plus.safetensors",
+                  "url": "https://huggingface.co/Comfy-Org/Real-ESRGAN_repackaged/resolve/main/RealESRGAN_x4plus.safetensors"
+                }
+              ],
+              "ver": "0.13.0"
+            },
+            "size": [
+              276,
+              96
+            ],
+            "type": "UpscaleModelLoader",
+            "widgets_values": [
+              "RealESRGAN_x4plus.safetensors"
+            ]
+          },
+          {
+            "flags": {},
+            "id": 81,
+            "inputs": [
+              {
+                "link": 92,
+                "localized_name": "image",
+                "name": "image",
+                "type": "IMAGE"
+              }
+            ],
+            "mode": 0,
+            "order": 12,
+            "outputs": [
+              {
+                "links": [
+                  93
+                ],
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE"
+              }
+            ],
+            "pos": [
+              1130,
+              998
+            ],
+            "properties": {
+              "Node name for S&R": "ImageScaleBy",
+              "cnr_id": "comfy-core",
+              "ver": "0.13.0"
+            },
+            "size": [
+              270,
+              138.65625
+            ],
+            "type": "ImageScaleBy",
+            "widgets_values": [
+              "lanczos",
+              0.5
+            ]
+          },
+          {
+            "flags": {},
+            "id": 80,
+            "inputs": [
+              {
+                "link": 93,
+                "localized_name": "pixels",
+                "name": "pixels",
+                "type": "IMAGE"
+              },
+              {
+                "link": 90,
+                "localized_name": "vae",
+                "name": "vae",
+                "type": "VAE"
+              }
+            ],
+            "mode": 0,
+            "order": 11,
+            "outputs": [
+              {
+                "links": [
+                  91
+                ],
+                "localized_name": "LATENT",
+                "name": "LATENT",
+                "type": "LATENT"
+              }
+            ],
+            "pos": [
+              1118,
+              1178
+            ],
+            "properties": {
+              "Node name for S&R": "VAEEncode",
+              "cnr_id": "comfy-core",
+              "ver": "0.13.0"
+            },
+            "size": [
+              276,
+              72
+            ],
+            "type": "VAEEncode",
+            "widgets_values": []
+          },
+          {
+            "bgcolor": "#535",
+            "color": "#323",
+            "flags": {},
+            "id": 71,
+            "inputs": [
+              {
+                "link": 82,
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP"
+              }
+            ],
+            "mode": 0,
+            "order": 8,
+            "outputs": [
+              {
+                "links": [
+                  83
+                ],
+                "localized_name": "CONDITIONING",
+                "name": "CONDITIONING",
+                "type": "CONDITIONING"
+              }
+            ],
+            "pos": [
+              866,
+              470
+            ],
+            "properties": {
+              "Node name for S&R": "CLIPTextEncode",
+              "cnr_id": "comfy-core",
+              "enableTabs": false,
+              "hasSecondTab": false,
+              "secondTabOffset": 80,
+              "secondTabText": "Send Back",
+              "secondTabWidth": 65,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "ver": "0.3.73"
+            },
+            "size": [
+              564,
+              168
+            ],
+            "title": "CLIP Text Encode (Negative Prompt)",
+            "type": "CLIPTextEncode",
+            "widgets_values": [
+              ""
+            ]
+          },
+          {
+            "bgcolor": "#353",
+            "color": "#232",
+            "flags": {},
+            "id": 67,
+            "inputs": [
+              {
+                "link": 78,
+                "localized_name": "clip",
+                "name": "clip",
+                "type": "CLIP"
+              }
+            ],
+            "mode": 0,
+            "order": 5,
+            "outputs": [
+              {
+                "links": [
+                  75
+                ],
+                "localized_name": "CONDITIONING",
+                "name": "CONDITIONING",
+                "type": "CONDITIONING"
+              }
+            ],
+            "pos": [
+              866,
+              -46
+            ],
+            "properties": {
+              "Node name for S&R": "CLIPTextEncode",
+              "cnr_id": "comfy-core",
+              "enableTabs": false,
+              "hasSecondTab": false,
+              "secondTabOffset": 80,
+              "secondTabText": "Send Back",
+              "secondTabWidth": 65,
+              "tabWidth": 65,
+              "tabXOffset": 10,
+              "ver": "0.3.73"
+            },
+            "size": [
+              564,
+              420
+            ],
+            "title": "CLIP Text Encode (Positive Prompt)",
+            "type": "CLIPTextEncode",
+            "widgets_values": [
+              "masterpiece, 8k"
+            ]
+          },
+          {
+            "bgcolor": "#000",
+            "color": "#222",
+            "flags": {
+              "collapsed": false
+            },
+            "id": 163,
+            "inputs": [],
+            "mode": 0,
+            "order": 0,
+            "outputs": [],
+            "pos": [
+              386,
+              794
+            ],
+            "properties": {},
+            "size": [
+              252,
+              132
+            ],
+            "title": "Upscale by model 👁️",
+            "type": "MarkdownNote",
+            "widgets_values": [
+              "In order to increase fidelity we will pre-upscale the image before resampling it with the Ksampler.\n\n1. Set the target Resolution in ImageScaleToMaxDimension\n\n2. Select an upscaling model \n"
+            ]
+          }
+        ],
+        "outputNode": {
+          "bounding": [
+            2550.2431543651223,
+            572.4000153303473,
+            144,
+            72
+          ],
+          "id": -20
+        },
+        "outputs": [
+          {
+            "id": "f138a0aa-489a-42e1-92f7-e3747688c94d",
+            "label": "IMAGE",
+            "linkIds": [
+              97,
+              103
+            ],
+            "localized_name": "IMAGE_1",
+            "name": "IMAGE_1",
+            "pos": [
+              2143.535961970935,
+              495.3333461086228
+            ],
+            "type": "IMAGE"
+          }
+        ],
+        "revision": 0,
+        "state": {
+          "lastGroupId": 33,
+          "lastLinkId": 216,
+          "lastNodeId": 165,
+          "lastRerouteId": 0
+        },
+        "version": 1,
+        "widgets": []
+      }
+    ]
+  },
+  "extra": {
+    "VHS_KeepIntermediate": true,
+    "VHS_MetadataImage": true,
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "ds": {
+      "offset": [
+        -9417.927826013214,
+        315.31944881966996
+      ],
+      "scale": 0.2484023339509616
+    },
+    "frontendVersion": "1.41.13",
+    "workflowRendererVersion": "Vue"
+  },
+  "groups": [
+    {
+      "bounding": [
+        11930,
+        1166,
+        1200,
+        708
+      ],
+      "color": "#3f789e",
+      "flags": {},
+      "font_size": 24,
+      "id": 25,
+      "title": "Analyze image and create caption"
+    },
+    {
+      "bounding": [
+        11306,
+        1166,
+        576,
+        708
+      ],
+      "color": "#3f789e",
+      "flags": {},
+      "font_size": 24,
+      "id": 26,
+      "title": "Load Image"
+    },
+    {
+      "bounding": [
+        13178,
+        1166,
+        860,
+        1160
+      ],
+      "color": "#3f789e",
+      "flags": {},
+      "font_size": 24,
+      "id": 31,
+      "title": "Upscale"
+    }
+  ],
+  "id": "590140e2-6caa-40fc-8423-20939e236bcf",
+  "last_link_id": 216,
+  "last_node_id": 165,
+  "links": [
+    [
+      179,
+      150,
+      0,
+      149,
+      1,
+      "FL2MODEL"
+    ],
+    [
+      180,
+      132,
+      0,
+      149,
+      0,
+      "IMAGE"
+    ],
+    [
+      189,
+      149,
+      2,
+      157,
+      0,
+      "STRING"
+    ],
+    [
+      207,
+      162,
+      0,
+      143,
+      0,
+      "IMAGE"
+    ],
+    [
+      208,
+      162,
+      0,
+      158,
+      0,
+      "IMAGE"
+    ],
+    [
+      213,
+      132,
+      0,
+      162,
+      0,
+      "IMAGE"
+    ],
+    [
+      214,
+      132,
+      0,
+      158,
+      1,
+      "IMAGE"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {
+        "collapsed": false
+      },
+      "id": 132,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            180,
+            213,
+            214
+          ],
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": null,
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        11429.999814230265,
+        1246.0000816449265
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        330,
+        582.75
+      ],
+      "type": "LoadImage",
+      "widgets_values": [
+        "dragon_fruit_cream.png",
+        "image"
+      ]
+    },
+    {
+      "bgcolor": "#000",
+      "color": "#222",
+      "flags": {
+        "collapsed": false
+      },
+      "id": 121,
+      "inputs": [],
+      "mode": 0,
+      "order": 1,
+      "outputs": [],
+      "pos": [
+        11970.001249942645,
+        1525.9995002586882
+      ],
+      "properties": {},
+      "size": [
+        330,
+        291.984375
+      ],
+      "title": "Step 1 - Automated Prompt ✍️",
+      "type": "MarkdownNote",
+      "widgets_values": [
+        "## Florence2Run\n\nUsing Florence-2 multimodal model to analyze an input image through tasks like **more detailed caption**:\n- Generates a prompt from an image input, incorporating finer details such as object attributes, spatial relationships, actions, scene context, and subtle visual elements"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 149,
+      "inputs": [
+        {
+          "link": 180,
+          "name": "image",
+          "type": "IMAGE"
+        },
+        {
+          "link": 179,
+          "name": "florence2_model",
+          "type": "FL2MODEL"
+        }
+      ],
+      "mode": 0,
+      "order": 9,
+      "outputs": [
+        {
+          "links": [],
+          "name": "image",
+          "type": "IMAGE"
+        },
+        {
+          "links": [],
+          "name": "mask",
+          "type": "MASK"
+        },
+        {
+          "links": [
+            189
+          ],
+          "name": "caption",
+          "type": "STRING"
+        },
+        {
+          "links": [],
+          "name": "data",
+          "type": "JSON"
+        }
+      ],
+      "pos": [
+        12337.999537889884,
+        1274.0000110333403
+      ],
+      "properties": {
+        "Node name for S&R": "Florence2Run"
+      },
+      "size": [
+        336,
+        462.65625
+      ],
+      "type": "Florence2Run",
+      "widgets_values": [
+        "",
+        "more_detailed_caption",
+        true,
+        false,
+        1024,
+        3,
+        true,
+        "",
+        1093475924089169,
+        "randomize"
+      ]
+    },
+    {
+      "flags": {
+        "collapsed": false
+      },
+      "id": 150,
+      "inputs": [
+        {
+          "link": null,
+          "name": "lora",
+          "shape": 7,
+          "type": "PEFTLORA"
+        }
+      ],
+      "mode": 0,
+      "order": 2,
+      "outputs": [
+        {
+          "links": [
+            179
+          ],
+          "name": "florence2_model",
+          "type": "FL2MODEL"
+        }
+      ],
+      "pos": [
+        11965.999923641199,
+        1274.0000110333403
+      ],
+      "properties": {
+        "Node name for S&R": "DownloadAndLoadFlorence2Model"
+      },
+      "size": [
+        327.59375,
+        203.984375
+      ],
+      "type": "DownloadAndLoadFlorence2Model",
+      "widgets_values": [
+        "MiaoshouAI/Florence-2-large-PromptGen-v2.0",
+        "fp16",
+        "sdpa",
+        false
+      ]
+    },
+    {
+      "flags": {},
+      "id": 157,
+      "inputs": [
+        {
+          "link": 189,
+          "name": "source",
+          "type": "*"
+        }
+      ],
+      "mode": 0,
+      "order": 12,
+      "outputs": [],
+      "pos": [
+        12722.000137531963,
+        1274.0000110333403
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewAny"
+      },
+      "size": [
+        360.734375,
+        572.625
+      ],
+      "type": "PreviewAny",
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "bgcolor": "#000",
+      "color": "#222",
+      "flags": {},
+      "id": 160,
+      "inputs": [],
+      "mode": 0,
+      "order": 3,
+      "outputs": [],
+      "pos": [
+        13740,
+        1280
+      ],
+      "properties": {},
+      "size": [
+        252,
+        119.171875
+      ],
+      "title": "Note",
+      "type": "MarkdownNote",
+      "widgets_values": [
+        "👈 Enter the [subgraph](https://docs.comfy.org/interface/features/subgraph) \nto understand the upscale"
+      ]
+    },
+    {
+      "flags": {
+        "collapsed": false
+      },
+      "id": 143,
+      "inputs": [
+        {
+          "link": 207,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 10,
+      "outputs": [],
+      "pos": [
+        14077.999729243187,
+        1202.000085694885
+      ],
+      "properties": {},
+      "size": [
+        720,
+        1111.046875
+      ],
+      "type": "SaveImage",
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "flags": {
+        "collapsed": false
+      },
+      "id": 158,
+      "inputs": [
+        {
+          "link": 208,
+          "name": "image_a",
+          "shape": 7,
+          "type": "IMAGE"
+        },
+        {
+          "link": 214,
+          "name": "image_b",
+          "shape": 7,
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 11,
+      "outputs": [],
+      "pos": [
+        14849.999911384391,
+        1210.0000388946573
+      ],
+      "properties": {
+        "Node name for S&R": "ImageCompare"
+      },
+      "size": [
+        720,
+        1100
+      ],
+      "type": "ImageCompare",
+      "widgets_values": []
+    },
+    {
+      "bgcolor": "#000",
+      "color": "#222",
+      "flags": {
+        "collapsed": true
+      },
+      "id": 138,
+      "inputs": [],
+      "mode": 0,
+      "order": 4,
+      "outputs": [],
+      "pos": [
+        15386.000368565758,
+        1118.0000480703977
+      ],
+      "properties": {},
+      "size": [
+        225,
+        8
+      ],
+      "title": "Hit run 👆",
+      "type": "MarkdownNote",
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "bgcolor": "#000",
+      "color": "#222",
+      "flags": {
+        "collapsed": false
+      },
+      "id": 165,
+      "inputs": [],
+      "mode": 0,
+      "order": 5,
+      "outputs": [],
+      "pos": [
+        13220,
+        2010
+      ],
+      "properties": {},
+      "size": [
+        468,
+        278.1875
+      ],
+      "title": "Step 2 - Upscale",
+      "type": "MarkdownNote",
+      "widgets_values": [
+        "## Upscale\n\nUsing Image Z Turbo on a low denoise value, we can increase detail in an image.\n\nCompared to a basic diffusion process a upscale uses lower denoising values.\n| Parameters  | Basic Diffusion | Upscaling |\n|--------|---------|------------\n| Ksampler: denoise  | 1.0     | 0.2 - 0.35         "
+      ]
+    },
+    {
+      "flags": {},
+      "id": 162,
+      "inputs": [
+        {
+          "link": 213,
+          "name": "image",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 8,
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "links": [
+            207,
+            208
+          ],
+          "name": "IMAGE_1",
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        13213.99973111337,
+        1273.9999318610107
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "proxyWidgets": [
+          [
+            "66",
+            "unet_name"
+          ],
+          [
+            "62",
+            "clip_name"
+          ],
+          [
+            "63",
+            "vae_name"
+          ],
+          [
+            "76",
+            "model_name"
+          ],
+          [
+            "69",
+            "denoise"
+          ],
+          [
+            "69",
+            "seed"
+          ],
+          [
+            "69",
+            "control_after_generate"
+          ],
+          [
+            "164",
+            "largest_size"
+          ],
+          [
+            "67",
+            "text"
+          ]
+        ],
+        "ver": "0.14.1"
+      },
+      "size": [
+        480,
+        628
+      ],
+      "type": "3b4342ec-d8c2-43e3-83da-3b0fd25f4c0c",
+      "widgets_values": []
+    },
+    {
+      "bgcolor": "#000",
+      "color": "#222",
+      "flags": {
+        "collapsed": false
+      },
+      "id": 134,
+      "inputs": [],
+      "mode": 0,
+      "order": 6,
+      "outputs": [],
+      "pos": [
+        10922.000008396613,
+        1202.000085694885
+      ],
+      "properties": {},
+      "size": [
+        336,
+        163.984375
+      ],
+      "title": "ℹ️ Info",
+      "type": "MarkdownNote",
+      "widgets_values": [
+        "This is an **Upscaling** workflow for advanced image enhancement in diffusion models using Z Image Turbo, featuring **Automatic Image Analysis** with Florence2Run to generate refined prompts and optimize output quality."
+      ]
+    },
+    {
+      "bgcolor": "#000",
+      "color": "#222",
+      "flags": {
+        "collapsed": false
+      },
+      "id": 133,
+      "inputs": [],
+      "mode": 0,
+      "order": 7,
+      "outputs": [],
+      "pos": [
+        10922.000008396613,
+        1454.0000738387243
+      ],
+      "properties": {},
+      "size": [
+        336,
+        442.375
+      ],
+      "title": "🔍 Core Concept",
+      "type": "MarkdownNote",
+      "widgets_values": [
+        "## Upscaling\n\nUpscaling increases image resolution and detail via diffusion, creating a higher-quality version that preserves original content and structure.\nIt adds denoised pixels throughout to enlarge the image, blending with the upscaled base for better clarity.\n\n## Automatic Image Analysis\n\nAutomatic image analysis with Florence-2 via Florence2Run to inspect the input image and create refined prompts for upscaling guidance.\nIt enhances the diffusion model with detailed descriptions of objects, textures, and contexts to improve results."
+      ]
+    }
+  ],
+  "revision": 0,
+  "version": 0.4
+}
